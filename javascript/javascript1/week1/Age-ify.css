@@ -1,0 +1,13 @@
+html,body{
+    margin: 3rem;
+    padding: 3rem;
+    color: blue;
+}
+input{
+    border-radius: 0.5rem;
+    margin: 2rem;
+}
+div{
+    padding: 3rem   ;
+    border: 5px solid red;
+}
