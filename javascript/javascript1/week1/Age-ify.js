@@ -1,7 +1,9 @@
 function myFunction() {
-    var x = document.getElementById("YOB").value;
-    var y = document.getElementById("YF").value;
+    var yearOfBirth = document.getElementById("YOB").value;
+    var yearFuture = document.getElementById("YF").value;
+    var age = parseInt(yearFuture) - parseInt(yearOfBirth);
     
-    document.getElementById("YA").value =  parseInt(y) - parseInt(x);
+    document.getElementById("YA").value =  age;
+    window.alert(" You will be " + age + " years old in " + yearFuture);
   }
        
