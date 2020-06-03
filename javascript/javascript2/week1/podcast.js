@@ -27,8 +27,9 @@ for (let i = 0; i < podcasts.length; i++) {
     header1.innerHTML = podcasts[i].name;
     unorderedList.appendChild(header1);
 
-    let image = document.createElement("imageUrl");
-    image.innerHTML = podcasts[i].imageUrl;
+    let image = document.createElement("img");
+    image.setAttribute("src", podcasts[i].imageUrl);
+    image.setAttribute("alt", "image");
     unorderedList.appendChild(image);
   } else if (podcasts[i].name != null && podcasts[i].imageUrl == null) {
     let header1 = document.createElement("h1");
