@@ -5,22 +5,44 @@ Use this promise to log out the text 'hello' after 4 seconds.
 
 // creating a promise for resolve
 const promise = new Promise((resolve, reject) => {
-  // resolve promise after 10 seconds
+  // resolve promise after 4 seconds
   setTimeout(() => {
-    console.log("promise resolved after 10 seconds");
+    resolve("hello: promise resolved after 4 seconds");
   }, 10000);
 });
 
 // using the promise
-promise.then((data) => console.log(data));
+//promise.then((data) => console.log(data));'
+
+//using aync
+async function promiseUsingAsync() {
+  try {
+    const data = await promise;
+    console.log(data);
+  } catch (error) {
+    console.log(error);
+  }
+}
+promiseUsingAsync();
 
 //creating a promise for reject
 const promise1 = new Promise((resolve, reject) => {
-  // resolve promise after 2 seconds
+  // reject promise after 5 seconds
   setTimeout(() => {
-    console.log("promise rejected after 2 seconds");
-  }, 4000);
+    reject("promise rejected after 5 seconds");
+  }, 5000);
 });
 
 // using the promise
-promise1.then((data) => console.log(data));
+//promise1.catch((data) => console.log(data));
+
+//using aync
+async function promiseUsingAsyncReject() {
+  try {
+    const data = await promise1;
+    console.log(data);
+  } catch (error) {
+    console.log(error);
+  }
+}
+promiseUsingAsyncReject();
