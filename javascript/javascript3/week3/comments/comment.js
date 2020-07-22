@@ -49,7 +49,9 @@ class Post {
     console.log(this.username);
     const likes = this.likes.length;
     let comments = " ";
-    this.comments.forEach((comment) => (comments = comments + comment.content));
+    this.comments.forEach(
+      (comment) => (comments = comments + " " + comment.content)
+    );
     return `Total likes:${likes} and comments:${comments}`;
   }
 }
@@ -70,6 +72,7 @@ postLikes.addEventListener("click", () => {
 postComments.addEventListener("change", () => {
   const comment = postComments.querySelector("input").value;
   post1.addComment("James", comment, new Date());
+  postComments.querySelector("input").value = "";
 });
 
 postStatus.addEventListener("mouseover", () => {
