@@ -61,7 +61,7 @@ const postContentLikesCommentsEtc = userPost.getElementsByTagName("div");
 const postContent = postContentLikesCommentsEtc[0].innerHTML;
 const postLikes = postContentLikesCommentsEtc[1];
 const postComments = postContentLikesCommentsEtc[2];
-const postStatus = userPost.querySelector("label");
+const postStatus = userPost.querySelector("abbr");
 
 const post1 = new Post("James", postContent, new Date(), [], [], []);
 
@@ -76,5 +76,5 @@ postComments.addEventListener("change", () => {
 });
 
 postStatus.addEventListener("mouseover", () => {
-  window.alert(post1.logThis());
+  postStatus.title = post1.logThis();
 });
