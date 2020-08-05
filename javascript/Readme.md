@@ -1,4 +1,4 @@
-## Here you can find course content and homework for the JavaScript 1 module
+## Here you can find list of topics from javascript(javascript1: week1-4)(javascript2: week5-7)(javascript3: week8-10)
 
 | Week | Topic | 
 | ---- | ----- | 
