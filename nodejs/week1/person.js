@@ -1,9 +1,7 @@
-/* const person = {
+const personVar = {
   name: "anil",
   age: 30,
 };
-
-module.exports = person; */
 
 class Person {
   constructor(name, age) {
@@ -12,8 +10,9 @@ class Person {
   }
 
   greetings() {
-    console.log(`My name is ${this.name} and age ${this.age}`);
+    return `My name is ${this.name} and age ${this.age}`;
   }
 }
 
-module.exports = Person;
+exports.person = personVar;
+exports.PersonO = Person;
